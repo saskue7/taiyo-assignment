@@ -14,11 +14,15 @@ const Edit = () => {
 
  const onEdit = () => {
   
-  if (firstName && lastName) {
+   if (firstName && lastName && /^[a-zA-Z]+$/.test(firstName) && /^[a-zA-Z]+$/.test(lastName)) {
    console.log("heeh")
     dispatch(contactEdit(location.state.id,firstName,lastName))
+     navigate("/")
   }
-  navigate("/")
+  else{
+    alert("Please use valid alphabets for Editing")
+  }
+  
  }
 
  return (
