@@ -14,7 +14,7 @@ const Edit = () => {
 
  const onEdit = () => {
   
-   if (firstName && lastName && /^[a-zA-Z]+$/.test(firstName) && /^[a-zA-Z]+$/.test(lastName)) {
+   if (firstName && lastName && /^([a-zA-Z]){3,12}$/.test(firstName) && /^([a-zA-Z]){3,12}$/.test(lastName)) {
    console.log("heeh")
     dispatch(contactEdit(location.state.id,firstName,lastName))
      navigate("/")
@@ -26,8 +26,8 @@ const Edit = () => {
  }
 
  return (
-  <div className='flex flex-col justify-center mr-4'>
-   <div className="flex flex-col p-10 md: p-3" >
+  <div className='flex flex-col justify-center mr-4 w-full'>
+   <div className="flex flex-col w-full items-center p-10 md: p-3" >
     <h1 className="text-center mb-8 font-bold text-2xl">Edit Contact </h1>
     <form className="flex text-center md:flex-col items-center justify-center" >
      <label className="mr-1 ml-1">First Name</label>
