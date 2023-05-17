@@ -22,8 +22,8 @@ const CreateContact = () => {
    }
   }
   return (
-    <div className='flex flex-col justify-center mr-4'>
-      <div className="flex flex-col p-10 md: p-3" >
+    <div className='flex flex-col justify-center  mr-4 w-full'>
+      <div className="flex flex-col p-10 md: p-3 justify-center w-full items-center" >
         <h1 className="text-center mb-8 font-bold text-2xl">Create Contact </h1>
         <form className="flex text-center md:flex-col items-center justify-center" >
           <label className="mr-1 ml-1">First Name</label>
